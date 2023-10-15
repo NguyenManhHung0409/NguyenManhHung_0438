@@ -5,13 +5,13 @@ use App\Libraries\MyClass;
 
 if(isset($_POST['THEM'])){
     $contact= new Contact();
+    //lấy từ form
     $contact->name= $_POST ['name'];
     $contact->slug= (strlen($_POST['slug'])>0)? $_POST['slug']:MyClass :: str_slug($_POST['name']);
     $contact->description= $_POST ['description'];
     $contact->status= $_POST ['status'];
 
-
-
+//xử lý upload file
 if(strlen($_FILES['image']['name'])>0)
 {
     $target_dir ="../public/images/contact/";
@@ -23,11 +23,14 @@ if(strlen($_FILES['image']['name'])>0)
         $contact->image=$filename;
     }
 }
-
-$contact->created_at= date('Y-m-d h:i:s');
-    $brand->created_by= (isset($_SESSION['user_id'])) ? $_SESSION['user_id'] : 1;
-
+//tự sinh ra
+    $contact->created_at= date('Y-m-d H:i:s');
+    $contact->created_by= (isset($_SESSION['user_id'])) ? $_SESSION['user_id'] : 1;
+    
     var_dump($contact);
+    //lưu vào csdl
+    //insert into contact ...
     $contact->save();
+    //chuyên hướng về index
     header("location:index.php?option=contact");
 }

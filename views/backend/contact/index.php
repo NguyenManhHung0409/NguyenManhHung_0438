@@ -1,9 +1,15 @@
 <?php
 use App\Models\Contact;
-$list = Contact::all();
+//status=0--> Rac
+//status=1--> Hiện thị lên trang người dùng
+//
+//SELECT * FROM brand wher status!=0 and id=1 order by created_at desc
+
+$list = Contact::where('status','!=',0)->orderBy('Created_at','DESC')->get();
 ?>
 <?php require_once "../views/backend/header.php";?>
       <!-- CONTENT -->
+      <form action ="index.php?option=contact&cat=process" method="post" enctype="multipart/form-data">
       <div class="content-wrapper">
          <section class="content-header">
             <div class="container-fluid">
@@ -18,7 +24,7 @@ $list = Contact::all();
          <section class="content">
             <div class="card">
                <div class="card-header text-right">
-                  Noi dung
+                 Nội Dung
                </div>
                <div class="card-body">
                   <table class="table table-bordered" id="mytable">
@@ -27,43 +33,42 @@ $list = Contact::all();
                            <th class="text-center" style="width:30px;">
                               <input type="checkbox">
                            </th>
+                           <th>user_id</th>
                            <th>Họ tên</th>
-                           <th>Điện thoại</th>
                            <th>Email</th>
+                           <th>Điện thoại</th>
+
                            <th>Tiêu đề</th>
+                           <th>Nội Dung</th>
                         </tr>
                      </thead>
                      <tbody>
-                     <?php foreach($list as $item) : ?>
                         <tr class="datarow">
                            <td>
                               <input type="checkbox">
                            </td>
                            <td>
-                              <div class="name">
-                              <?php echo $item->name; ?>
+                              1
                               </div>
                               <div class="function_style">
-                              <?php if($item->status==1):?>
-                                          <a class="text-success" href="idex.php?option=contact&cat=status">Hiện</a> |
-                                       <?php else:?>
-                                          <a class="text-danger" href="idex.php?option=contact&cat=status&id= <?php echo $item->id; ?>">Ẩn</a> |
-                                       <?php endif;?>
-                                       <a href="idex.php?option=contact&cat=edit&id= <?php echo $item->id; ?>">Chỉnh sửa</a> |   
-                                       <a href="idex.php?option=contact&cat=show&id= <?php echo $item->id; ?>">Chi tiết</a> |
-                                       <a href="idex.php?option=contact&cat=delete&id= <?php echo $item->id; ?>">Xoá</a>
+                                 <a href="#">Hiện</a> |
+                                 <a href="#">Trả lời</a> |
+                                 <a href="../backend/brand_show.html">Chi tiết</a> |
+                                 <a href="#">Xoá</a>
                               </div>
                            </td>
-                           <td>098765432</td>
-                           <td>dienloisoft@gmail.com</td>
-                           <td>Tieu đề</td>
+                           <td>Nguyễn Mạnh Hùng</td>
+                           <td>nguyenmanhhung176472@gmail.com</td>
+                           <td>0961804507</td>
+                           <td>Admin Shop</td>
+                           <td>Bán Tạp Hoá</td>
                         </tr>
-                        <?php endforeach;?>
                      </tbody>
                   </table>
                </div>
             </div>
          </section>
       </div>
+      <form action ="index.php?option=brand&cat=process" method="post" enctype="multipart/form-data">
       <!-- END CONTENT-->
       <?php require_once "../views/backend/footer.php";?>

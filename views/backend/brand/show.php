@@ -60,41 +60,36 @@ if($brand==null){
                               </tr>
                               <tr>
                                  <td>image</td>
-                                 <td><img style="width:100" src="../public/images/brand/<?=$brand->image;?>" alt="<?=$item->image;?>"></td>
+                                 <td><img style="width:100px;" src="../public/images/brand/<?=$brand->image;?>" alt="<?=$brand->image;?>"></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>sort_order</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>description</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>created_at</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>created_by</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>updated_at</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>updated_by</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
                               <tr>
-                                 <td>ID</td>
+                                 <td>status</td>
                                  <td><?= $brand->id; ?></td>
                               </tr>
-                              <tr>
-                                 <td>ID</td>
-                                 <td><?= $brand->id; ?></td>
-                              </tr>
-
                            </tbody>
                         </table>
                      </div>

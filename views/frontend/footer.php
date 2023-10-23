@@ -8,10 +8,10 @@
                   mong muốn đem đến chất lượng tốt nhất cho khách hàng.
                </p>
                <p class="pt-1">
-                  Địa chỉ: Biên Hoà - Đồng Nai
+                  Địa chỉ: B216A, KP Bình Phước, Phường Bình Nhâm, TP. Thuận An, Bình Dương
                </p>
                <p class="pt-1">
-                  Điện thoại: 0961 804 507(call, zalo) - Email: nguyenmanhhung176472@gmail.com
+                  Điện thoại: 0985 608 759(call, zalo) - Email: dienloisoft@gmail.com
                </p>
                <h3 class="widgettilte">MẠNG XÃ HỘI</h3>
                <div class="social my-3">
@@ -51,7 +51,7 @@
    </section>
    <section class="dhl-copyright bg-dark py-3">
       <div class="container text-center text-white">
-         Thiết kế bởi: Nguyễn Mạnh Hùng - Phone: 0961804507
+         Thiết kế bởi: Hồ Diên Lợi - Phone: 0998765432
       </div>
    </section>
 </body>

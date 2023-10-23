@@ -23,7 +23,7 @@ if(count($list_category1)>0)
 }
 $list_product=Product::where('status','=',1)
 ->whereIn('category_id',$list_id)
-->orderBy('created_at','DESC')->get();
+->orderBy('created_at', 'DESC')  ->get();
 ?>
 <?php require_once "views/frontend/header.php"?>
    <section class="bg-light">
@@ -48,6 +48,7 @@ $list_product=Product::where('status','=',1)
             <?php require_once "views/frontend/mod-listbrand.php"?>
             <?php require_once "views/frontend/mod-product-new.php"?>
             
+              
             </div>
             <div class="col-md-9 order-1 order-md-2">
                <div class="category-title bg-main">

@@ -32,6 +32,7 @@ if(strlen($_FILES['image']['name'])>0)
     //insert into brand ...
     $brand->save();
     //chuyên hướng về index
+    MyClass :: set_flash('message',['msg'=>'Thêm thành công','type'=>'success']);
     header("location:index.php?option=brand");
 }
 

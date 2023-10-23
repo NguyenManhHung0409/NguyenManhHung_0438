@@ -1,5 +1,7 @@
 <?php
+
 use App\Models\Brand;
+
 //status=0--> Rac
 //status=1--> Hiện thị lên trang người dùng
 //
@@ -42,6 +44,7 @@ $list = brand::where('status','!=',0)->orderBy('Created_at','DESC')->get();
 
                </div>
                <div class="card-body">
+               <?php require_once "../views/backend/message.php";?>
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
